@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHR Navbar</title>
+
+    <!-- BOOTSTRAP 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        /* Global */
+        body {
+            background: #021b2b;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .smarthr-navbar {
+            background: white;
+            margin: 20px;
+            border-radius: 15px;
+        }
+
+        .logo-text {
+            font-size: 26px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .logo-text span {
+            color: orange;
+        }
+
+        /* Hero */
+        .hero {
+            color: white;
+        }
+
+        .main-text {
+            font-size: clamp(40px, 6vw, 75px);
+            line-height: 1.2;
+            font-weight: bold;
+        }
+
+        .blue {
+            color: #11c5f5;
+        }
+
+        /* Tech Buttons */
+        .tech-btn {
+            background: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-size: 15px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Floating animation */
+        .floating-y {
+            animation: floating-y 3s linear infinite;
+        }
+
+        @keyframes floating-y {
+
+            0%,
+            100% {
+                transform: translateY(-30px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Overview Section */
+        .overview {
+            background-color: white;
+        }
+
+        .overview-card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .overview-card:hover {
+            transform: scale(1.05);
+        }
+
+        .overview-card img {
+            width: 100%;
+        }
+
+        /* Use Case Section */
+        .section-usecase {
+            background-color: white;
+            padding: 60px 0 40px;
+        }
+
+        .usecase-badge {
+            color: #f06a38;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .usecase-badge::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #3b7080;
+        }
+
+        .usecase-icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: #f8fafc;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+
+        .usecase-icon-box img {
+            width: 38px;
+            height: 38px;
+        }
+
+        /* CTA Buttons */
+        .cta-btn {
+            background-color: black;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .cta-btn2 {
+            background-color: #f9733a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .cta-btn2:hover {
+            background-color: #e05e28;
+            color: white;
+        }
+
+        /* Section title underline */
+        .title-bar {
+            color: orange;
+            font-size: 14px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .title-bar::before {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: #212529;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 10px;
+        }
+
+        .title-bar::after {
+            content: "";
+            width: 70%;
+            height: 2px;
+            background: #3b7080;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+    =====================================================
+    NAVBAR  -- Bootstrap navbar component
+    Bootstrap classes used:
+      navbar             -> makes it a navbar
+      navbar-expand-lg   -> collapses on mobile, full on lg+
+      navbar-light       -> dark text/icons on light bg
+      container-fluid    -> full-width inner wrapper
+      navbar-brand       -> logo/brand link
+      navbar-toggler     -> hamburger button for mobile
+      collapse           -> collapsible area
+      navbar-collapse    -> collapse target for nav links
+      navbar-nav         -> the <ul> nav list
+      ms-auto            -> margin-start:auto  (pushes links right)
+      nav-item           -> each <li>
+      nav-link           -> each <a>
+      fw-semibold        -> font-weight: 600
+      btn btn-dark       -> Bootstrap dark filled button
+      rounded-3          -> border-radius
+      px-4               -> horizontal padding
+    ====================================================
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light smarthr-navbar px-4">
+
+        <!-- Logo (navbar-brand = styled brand link) -->
+       <!-- Logo -->
+        <div class="logo">
+            <img src="logo.svg" alt="SmartHR Logo">
+        </div>
+
+        <!-- Hamburger toggle for mobile (Bootstrap JS opens/closes it) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible menu (id matches data-bs-target above) -->
+        <div class="collapse navbar-collapse" id="navMenu">
+            <!-- ms-auto pushes this nav to the right -->
+            <ul class="navbar-nav ms-auto gap-2">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Demos</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Inner Pages</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Features</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">FAQ</a></li>
+            </ul>
+            <!-- btn btn-dark = Bootstrap dark button -->
+            <button class="btn btn-dark ms-3 rounded-3 px-4">Buy Template</button>
+        </div>
+    </nav>
+
+
+    <!--
+    =====================================================
+    HERO SECTION
+    Bootstrap classes used:
+      container     -> centered max-width wrapper
+      text-center   -> text-align: center
+      py-5          -> padding top & bottom (5 = 3rem)
+      mt-4          -> margin-top
+      fs-5          -> font-size: 1.25rem
+      d-flex        -> display: flex
+      justify-content-center -> flex main axis centering
+      gap-3         -> gap between flex children
+      mt-5          -> margin-top larger
+      img-fluid     -> responsive image (max-width:100%)
+      position-relative / position-absolute -> Bootstrap position utilities
+    ====================================================
+    -->
+    <section class="hero py-5 mt-4" id="home">
+        <div class="container text-center">
+
+            <h1 class="main-text">
+                Professional HR <br>
+                Management <br>
+                Template with
+                <span class="blue">React &amp;</span><br>
+                <span class="blue">Bootstrap</span>
+            </h1>
+
+            <p class="mt-4 fs-5">
+                A complete HR solution designed to enhance your recruitment process with ease.
+            </p>
+
+            <!-- Tech buttons — d-flex + gap-3 replaces custom flex CSS -->
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <button class="tech-btn">
+                    <img src="react.svg" alt="React" width="22"> React
+                </button>
+                <button class="tech-btn">
+                    <img src="nextjs.svg" alt="Next.js" width="22"> Next.js
+                </button>
+            </div>
+
+            <!-- Banner image (img-fluid = responsive) -->
+            <div class="mt-5 position-relative d-flex justify-content-center align-items-start">
+                <img src="banner-img.png" alt="Banner Image" class="img-fluid" id="banner-image">
+                <span class="floating-y position-absolute" style="top:20px; right:20%;">
+                    <img src="react-icon.svg" alt="React Icon">
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+    =====================================================
+    OVERVIEW SECTION
+    Bootstrap classes used:
+      container       -> centered wrapper
+      row             -> flex row (Bootstrap grid parent)
+      g-4             -> gap between columns (gutters)
+      col-sm-6        -> 2 columns on small screens
+      col-md-3        -> 4 columns on medium+ screens
+      justify-content-center -> center the row
+      text-center     -> center text
+      fw-bold         -> font-weight: bold
+      text-muted      -> gray text (Bootstrap utility)
+      text-dark       -> dark text
+      mb-5            -> margin-bottom
+      p-3             -> padding 1rem
+      h-100           -> height: 100% (equal height cards)
+      rounded         -> border-radius on image
+    ====================================================
+    -->
+    <section class="overview py-5">
+        <div class="container">
+
+            <div class="text-center mb-2">
+                <span class="title-bar">Overview</span>
+            </div>
+            <h2 class="text-center fw-bold text-dark mb-5" style="font-size:30px;">
+                All-in-One HR Solution for Growing Businesses
+            </h2>
+
+            <!-- Bootstrap grid: row + col = responsive layout, no custom CSS needed -->
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="overview-card p-3 h-100">
+                        <img src="overview-01.jpg" alt="overview-01" class="rounded">
+                        <h4 class="fw-bold mt-3" style="color:#333;">Effortless Job Listings</h4>
+                        <p class="text-muted">Simplify your recruitment efforts by creating and managing job postings.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="overview-card p-3 h-100">
+                        <img src="overview-02.jpg" alt="overview-02" class="rounded">
+                        <h4 class="fw-bold mt-3" style="color:#333;">Real-Time Analytics</h4>
+                        <p class="text-muted">Access insights on employee performance, attendance, and more.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="overview-card p-3 h-100">
+                        <img src="overview-03.jpg" alt="overview-03" class="rounded">
+                        <h4 class="fw-bold mt-3" style="color:#333;">Candidate Tracking</h4>
+                        <p class="text-muted">Streamline and manage your entire hiring pipeline with ease.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="overview-card p-3 h-100">
+                        <img src="overview-04.jpg" alt="overview-04" class="rounded">
+                        <h4 class="fw-bold mt-3" style="color:#333;">Customizable Theme Settings</h4>
+                        <p class="text-muted">Adjust and customize your platform with intuitive theme settings.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+    =====================================================
+    USE CASES SECTION
+    Bootstrap classes used:
+      container     -> centered wrapper
+      text-center   -> center all content
+      row g-4       -> 3-column grid with gutters
+      col-md-4      -> 3 equal columns on medium+ screens
+      fw-bold       -> bold headings
+      text-muted    -> gray paragraph text
+      d-flex        -> flex for CTA row
+      justify-content-center -> center CTA buttons
+      gap-3         -> space between buttons
+      mt-5          -> margin above CTA
+      mb-3 / mb-5   -> vertical spacing
+    ====================================================
+    -->
+    <section class="section-usecase">
+        <div class="container text-center">
+
+            <div class="mb-3">
+                <span class="usecase-badge">Use Cases</span>
+            </div>
+            <h2 class="fw-bold mb-5" style="color:#0f172a; font-size:32px;">
+                Designed for HR Professionals
+            </h2>
+
+            <!-- row + col-md-4 = 3 equal columns (Bootstrap 12-column grid: 4+4+4=12) -->
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="usecase-icon-box">
+                        <img src="use-case-icon-01.svg" alt="Small Teams">
+                    </div>
+                    <h3 class="fw-bold" style="color:#0f172a; font-size:20px;">Small Teams</h3>
+                    <p class="text-muted">
+                        Effortlessly manage recruitment, attendance, and payroll all in one centralized platform.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="usecase-icon-box">
+                        <img src="use-case-icon-02.svg" alt="Growing Businesses">
+                    </div>
+                    <h3 class="fw-bold" style="color:#0f172a; font-size:20px;">Growing Businesses</h3>
+                    <p class="text-muted">
+                        Scale your HR operations with advanced features like analytics and reporting.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="usecase-icon-box">
+                        <img src="use-case-icon-03.svg" alt="Large Enterprises">
+                    </div>
+                    <h3 class="fw-bold" style="color:#0f172a; font-size:20px;">Large Enterprises</h3>
+                    <p class="text-muted">
+                        Streamline operations across multiple departments with collaborative tools.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="d-flex justify-content-center gap-3 mt-5">
+                <a href="https://smarthr.dreamstechnologies.com/react/template/index" target="_blank" class="cta-btn">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                        <path d="M1 1L9 6L1 11V1Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    Live Demo
+                </a>
+                <a href="https://smarthr.co.in/" class="cta-btn2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Buy Full Product
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <secrion>
+          <secrion>
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="fs-14 fw-medium text-primary title-bar mb-2">
+                    "Demos"
+                    <i class="bg-white"></i>
+                    <i class="bg-white"></i>
+                </div>
+                <div class=" text-white">See the Template in Action</div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="template-inner-tab">
+                        <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+                            <li class="nav-item me-3 mb-2" role="presentation">
+                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
+                                    data-bs-ta="#pills-dashboard" type="button" role="tab" aria-selected="true">Admin
+                                    Dashboard</button>
+                            </li>
+                            <li><button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
+                                    data-bs-ta="#pills-dashboard" type="button" role="tab" aria-selected="true">
+                                    Employee Dashboard</button></li>
+                            <li>
+                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
+                                    data-bs-ta="#pills-dashboard" type="button" role="tab" aria-selected="true">
+                                    Deals Dashboard</button>
+                            </li>
+                            <li>
+                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
+                                    data-bs-ta="#pills-dashboard" type="button" role="tab" aria-selected="true">
+                                    Lead Dashboard</button>
+                            </li>
+                            <li>
+                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
+                                    data-bs-ta="#pills-dashboard" type="button" role="tab" aria-selected="true">
+                                    Super Admin</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-bg"></div>
+    </secrion>
+
+
+    <!-- Bootstrap 5 JS Bundle CDN (required for navbar mobile toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
