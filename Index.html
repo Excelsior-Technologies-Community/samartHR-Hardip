@@ -23,10 +23,13 @@
         .smarthr-navbar {
             background: white;
             margin: 20px;
+            padding: 15px 30px;
             border-radius: 15px;
         }
 
         .logo-text {
+            background-size: contain;
+            background-repeat: no-repeat;
             font-size: 26px;
             font-weight: bold;
             color: black;
@@ -39,6 +42,8 @@
         /* Hero */
         .hero {
             color: white;
+             margin-bottom: -450px;
+
         }
 
         .main-text {
@@ -49,6 +54,48 @@
 
         .blue {
             color: #11c5f5;
+        }
+
+        .banner-img {
+            margin-top: 100 px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+
+        }
+
+        .second-bg2 {
+            margin-top: 50px;
+            display: flex;
+            justify-content: left;
+            align-items: top;
+        }
+
+        .banner-bg-1 {
+            position: relative;
+            top: -1150px;
+            left: -200px;
+
+        }
+
+        .banner-bg-2 {
+            position: relative;
+            top: -1100px;
+            left: 700px;
+        }
+
+        .banner-bg-3 {
+            position: relative;
+            top: -350px;
+            right: -430px;
+            z-index: -1;
+        }
+
+        .banner-bg-4 {
+            position: relative;
+            top: -350px;
+            left: -720px;
+            z-index: -1;
         }
 
         /* Tech Buttons */
@@ -67,6 +114,10 @@
         /* Floating animation */
         .floating-y {
             animation: floating-y 3s linear infinite;
+            animation-name: floating-y;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
         @keyframes floating-y {
@@ -83,7 +134,87 @@
 
         /* Overview Section */
         .overview {
+            padding: 100px 0;
             background-color: white;
+            height: 600px;
+
+        }
+
+        .second-bg {
+            margin: -200px 0;
+            text-align: right;
+            position: relative;
+        }
+        .sec-bg-03{
+            position: relative;
+            top: -500px;;
+            right: -750px;
+            
+        }
+        .sec-bg-04{
+            position: relative;
+            top: 50px;;
+            left: -750px;
+        }
+
+        .section-header .title-bar {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .section-header .title-bar::before {
+            content: "";
+            width: 30%;
+            height: 2px;
+            border-radius: 10px;
+            background: #212529;
+            position: absolute;
+            left: -1px;
+            bottom: -2px;
+        }
+
+        .section-header .title-bar::after {
+            content: "";
+            width: 70%;
+            height: 2px;
+            border-radius: 10px;
+            background: #3b7080;
+            position: absolute;
+            right: -1px;
+            bottom: -2px;
+        }
+
+
+        .section-title {
+            color: orange;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .container {
+            /* color: orange; */
+            text-align: center;
+           
+            padding: 50px;
+            /* text-decoration: underline; */
+        }
+
+        .heading {
+            color: #333;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: -10px;
+
         }
 
         .overview-card {
@@ -184,129 +315,155 @@
 
         /* Section title underline */
         .title-bar {
-            color: orange;
+            color: #ff5b37;
             font-size: 14px;
             font-weight: bold;
             position: relative;
             display: inline-block;
             padding-bottom: 5px;
-        }
-
-        .title-bar::before {
-            content: "";
-            width: 30%;
-            height: 2px;
-            background: #212529;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            border-radius: 10px;
-        }
-
-        .title-bar::after {
-            content: "";
-            width: 70%;
-            height: 2px;
-            background: #3b7080;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            border-radius: 10px;
+            margin-top: 150px;
         }
 
 
-        .section {
-            padding: 60px 0;
-            /* consistent spacing */
-        }
 
+
+        /* Section Background */
         .demo-sec {
-            background: #212529;
-            color: #fff;
-            /* or a lighter gray for softer contrast */
+            background-color: #1f2226;
+            height: 1260px;
+            padding: 50px ;
             position: relative;
             z-index: 1;
+            overflow: hidden;
         }
 
-        .demo-sec::before {
-            content: "";
+        /* Header Text Color */
+        .text-orange {
+            color: #ff5b37;
+
+        }
+        .sec-bg-02{
             position: absolute;
             top: 0;
-            left: 0;
+            right: -700px;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            /* adjust opacity as needed */
             z-index: -1;
-            /* make sure it's behind the content */
         }
 
-        .demo-sec .title-bar {
-            margin-top: 50px;
-            color: #f9733a;
-            /* or a light color for better visibility */
-        }
-
-        .demo-sec .title-bar::before,
-        .demo-sec .title-bar::after {
-            background: #fff;
-
-            /* or a light color for better visibility */
-        }
-
-        .h2 {
-            color: #fff;
-            font: bold;
-            font-size: 20px;
-            margin-top: -7px;
-            margin-bottom: 30px;
-            /* or a light color for better visibility */
-        }
-
-
-
-        .demo-sec .btn {
-            background-color: #fff;
-            /* or a light color for better visibility */
-            color: #333;
-            /* or a dark color for better visibility */
-        }
-
-        .demo-sec .btn:hover {
-            background-color: #333;
-            /* or a dark color for better visibility */
-            color: #fff;
-            /* or a light color for better visibility */
-        }
-
-        /* Dashboard Buttons Style */
-        .template-inner-tab .nav-link {
-            background-color: white !important;
-            color: black !important;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+        /* Nav Pills (Tabs) Styling */
+        .demo-sec .nav-pills .nav-link {
+            background-color: #ffffff;
+            color: #333333;
+            font-weight: 500;
+            border-radius: 6px;
             padding: 10px 20px;
-            transition: 0.3s;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Active Tab Styling */
+        .demo-sec .nav-pills .nav-link.active {
+            background-color: #ff5b37 !important;
+            color: #ffffff !important;
+        }
+
+        .template-inner-tab .nav-link:hover {
+            background: #f9733a;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(249, 115, 58, 0.4);
+        }
+
+        /* Dashboard Preview Container */
+        .dashboard-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .dashboard-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(249, 115, 58, 0.4);
+        }
+
+
+
+        /* Buy Template Button */
+        .btn-buy-template {
+            background-color: #ff5b37;
+            color: #ffffff;
             font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
         }
-        .template-inner-tab .nav-link.active {
-            background-color: white !important;
-            color: black !important;
-           
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: 0.3s;
-            font-weight: medium;
+
+        .btn-buy-template:hover {
+            background-color: #e04b2c;
+            color: #ffffff;
         }
-        .template-inner-tab .nav-link.active1{
-            background-color:#f9733a !important;
-            color: white !important;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: 0.3s;
-            font-weight: 600;
+
+        /* Demos text color*/
+        .text-orange {
+            color: #ff5b37;
+            display: inline-block;
+            text-align: center;
         }
+
+
+        .title-lines {
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+            gap: 4px;
+
+            margin-top: 6px;
+
+        }
+
+
+        .title-lines .line-small {
+            display: inline-block;
+            width: 12px;
+
+            height: 3px;
+
+            background-color: #ffffff !important;
+            border-radius: 2px;
+        }
+
+        .title-lines .line-large {
+            display: inline-block;
+            width: 35px;
+
+            height: 3px;
+
+            background-color: #ffffff !important;
+            border-radius: 2px;
+        }
+       .sec-bg-01{
+        position: relative;
+        top: 1300;
+        left: -700px;
+        width: 100%;
+        height: 100%;
+        
+       }
+        
+
+       
     </style>
 </head>
 
@@ -414,6 +571,12 @@
                     <img src="/assets/images/icons/react-icon.svg" alt="React Icon">
                 </span>
             </div>
+            <div class="banner-bg">
+                <img src="/assets/images/icons/banner-bg-01.svg" alt="Banner Background" class="banner-bg-1">
+                <img src="/assets/images/icons/banner-bg-02.svg" alt="Banner Background" class="banner-bg-2">
+                <img src="/assets/images/img/banner-bg-03.webp" alt="Banner Background" class="banner-bg-3">
+                <img src="/assets/images/img/banner-bg-04.webp" alt="Banner Background" class="banner-bg-4">
+            </div>
         </div>
     </section>
 
@@ -483,9 +646,11 @@
                         <p class="text-muted">Adjust and customize your platform with intuitive theme settings.</p>
                     </div>
                 </div>
-
             </div>
-        </div>
+            <div class="sec-bg">
+                <img src="/assets/images/Img/sec-bg-03.png" class="sec-bg-03" alt="img">
+                <img src="/assets/images/Img/sec-bg-04.png" class="sec-bg-04" alt="img">
+            </div>
     </section>
 
 
@@ -573,135 +738,133 @@
 
         </div>
     </section>
-    <secrion class="section demo-sec" id="demos">
-
+    <section class="section demo-sec" id="demos">
         <div class="container">
-            <div class="section-header text-center">
-                <div class="fs-14 fw-medium title-bar mb-2 ">
-                    "Demos"
-                    <i class="bg-white"></i>
-                    <i class="bg-white"></i>
+            <div class="section-header text-center mb-5">
+                <div class="fs-14 fw-medium mb-2 text-orange text-center">
+                    Demos
+                    <div class="title-lines">
+                        <i class="line-small"></i>
+                        <i class="line-large"></i>
+                    </div>
                 </div>
-                <div class="h2">See the Template in Action</div>
-
+                <h2 class="text-white fw-bold">See the Template in Action</h2>
             </div>
+
             <div class="row">
-                <div class="col-md-10 mx-auto">
+                <div class="col-md-12 mx-auto">
                     <div class="template-inner-tab">
-                        <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
-                            <li class="nav-item me-3 mb-2" role="presentation">
-                                <button class="nav-link active1" id="pills-dashboard-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-dashboard" type="button" role="tab">
+                        <ul class="nav nav-pills justify-content-center gap-2 mb-4" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-admin-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-admin" type="button" role="tab">
                                     Admin Dashboard
                                 </button>
                             </li>
-                            <li><button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-dashboard" type="button" role="tab">
-                                    Employee Dashboard</button>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-employee-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-employee" type="button" role="tab">
+                                    Employee Dashboard
+                                </button>
                             </li>
-                            <li>
-                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-dashboard" type="button" role="tab">
-                                    Deals Dashboard</button>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-deals-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-deals" type="button" role="tab">
+                                    Deals Dashboard
+                                </button>
                             </li>
-                            <li>
-                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-dashboard" type="button" role="tab">
-                                    Lead Dashboard</button>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-leads-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-leads" type="button" role="tab">
+                                    Leads Dashboard
+                                </button>
                             </li>
-                            <li>
-                                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-dashboard" type="button" role="tab">
-                                    Super Admin</button>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-super-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-super" type="button" role="tab">
+                                    Super Admin
+                                </button>
                             </li>
                         </ul>
-                        <div class="tab-content dashboard-tab">
-                            <div class="tab-pane fade" id="pills-dashboard" role="tabpanel"
-                                aria-labelledby="pills-dashboard-tab">
-                                <div class="card card-hover">
-                                    <div class="card-body">
-                                        <div class="dashboard-img rounded-top pb-0">
-                                            <a href="https://smarthr.dreamstechnologies.com/react/template/index"
-                                                target="_blank">
-                                                <img src="/assets/images/img/dashboard-01.jpg" class="rounded-top"
-                                                    alt="SmartHR Amind Template">
-                                            </a>
-                                        </div>
+
+                        <div class="tab-content dashboard-tab" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-admin" role="tabpanel">
+                                <div class="card dashboard-card">
+                                    <div class="card-body p-3">
+                                        <a href="https://smarthr.dreamstechnologies.com/react/template/index"
+                                            target="_blank">
+                                            <img src="/assets/images/img/dashboard-01.jpg" class="img-fluid rounded"
+                                                alt="Admin Dashboard">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-dashboard2" role="tabpanel"
-                                aria-labelledby="pills-dashboard-tab2">
-                                <div class="card card-hover">
-                                    <div class="card-body">
-                                        <div class="dashboard-img rounded-top pb-0">
-                                            <a href="https://smarthr.dreamstechnologies.com/react/template/employee-dashboard"
-                                                target="_blank">
-                                                <img src="/assets/images/img/dashboard-02.jpg" class="rounded-top"
-                                                    alt="SmartHR Amind Template">
-                                            </a>
-                                        </div>
+                            <div class="tab-pane fade" id="pills-employee" role="tabpanel">
+                                <div class="card dashboard-card">
+                                    <div class="card-body p-3">
+                                        <a href="https://smarthr.dreamstechnologies.com/react/template/employee-dashboard"
+                                            target="_blank">
+                                            <img src="/assets/images/img/dashboard-02.jpg" class="img-fluid rounded"
+                                                alt="Employee Dashboard">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-dashboard3" role="tabpanel"
-                                aria-labelledby="pills-dashboard-tab3">
-                                <div class="card card-hover">
-                                    <div class="card-body">
-                                        <div class="dashboard-img rounded-top pb-0">
-                                            <a href="https://smarthr.dreamstechnologies.com/react/template/index"
-                                                target="_blank">
-                                                <img src="/assets/images/img/dashboard-03.jpg" class="rounded-top"
-                                                    alt="SmartHR Amind Template">
-                                            </a>
-                                        </div>
+                            <div class="tab-pane fade" id="pills-deals" role="tabpanel">
+                                <div class="card dashboard-card">
+                                    <div class="card-body p-3">
+                                        <a href="https://smarthr.dreamstechnologies.com/react/template/index"
+                                            target="_blank">
+                                            <img src="/assets/images/img/dashboard-04.jpg" class="img-fluid rounded"
+                                                alt="Deals Dashboard">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-dashboard4" role="tabpanel"
-                                aria-labelledby="pills-dashboard-tab4">
-                                <div class="card card-hover">
-                                    <div class="card-body">
-                                        <div class="dashboard-img rounded-top pb-0">
-                                            <a href="https://smarthr.dreamstechnologies.com/react/template/index"
-                                                target="_blank">
-                                                <img src="/assets/images/img/dashboard-01.jpg" class="rounded-top"
-                                                    alt="SmartHR Amind Template">
-                                            </a>
-                                        </div>
+                            <div class="tab-pane fade" id="pills-leads" role="tabpanel">
+                                <div class="card dashboard-card">
+                                    <div class="card-body p-3">
+                                        <a href="https://smarthr.dreamstechnologies.com/react/template/index"
+                                            target="_blank">
+                                            <img src="/assets/images/img/dashboard-03.jpg" class="img-fluid rounded"
+                                                alt="Leads Dashboard">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-dashboard5" role="tabpanel"
-                                aria-labelledby="pills-dashboard-tab5">
-                                <div class="card card-hover">
-                                    <div class="card-body">
-                                        <div class="dashboard-img rounded-top pb-0">
-                                            <a href="https://smarthr.dreamstechnologies.com/react/template/index"
-                                                target="_blank">
-                                                <img src="/assets/images/img/dashboard-05.jpg" class="rounded-top"
-                                                    alt="SmartHR Amind Template">
-                                            </a>
-                                        </div>
+                            <div class="tab-pane fade" id="pills-super" role="tabpanel">
+                                <div class="card dashboard-card">
+                                    <div class="card-body p-3">
+                                        <a href="https://smarthr.dreamstechnologies.com/react/template/index"
+                                            target="_blank">
+                                            <img src="/assets/images/img/dashboard-05.jpg" class="img-fluid rounded"
+                                                alt="Super Admin Dashboard">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-3">
-                    <a href="https://themeforest.net/item/smarthr-react-admin-template/28253842" target="_blank"
-                        class="cta-btn2 btn-buy"><i class="ti ti-shopping-cart-up me-2">
-                            :before
-                        </i>"Buy Template"
-                    </a>
-                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://themeforest.net/item/smarthr-react-admin-template/28253842" class="cta-btn2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Buy Full Product
+                </a>
             </div>
             <div class="sec-bg">
-                <img src="/assets/images/Img/sec-bg-06.webp" class="sec-bg-1" alt="img">
-                <img src="/assets/images/Img/sec-bg-05.webp" class="sec-bg-2" alt="img">
+                <div class="sec-bg-01"><img src="/assets/images/Img/sec-bg-06.webp"  alt="img"></div>
+                <div class="sec-bg-02"><img src="/assets/images/Img/sec-bg-05.webp"  alt="img"></div>
             </div>
-    </secrion>
+        </div>
+    </section>
 
 
     <!-- Bootstrap 5 JS Bundle CDN (required for navbar mobile toggle) -->
