@@ -42,7 +42,7 @@
         /* Hero */
         .hero {
             color: white;
-             margin-bottom: -450px;
+            margin-bottom: -450px;
 
         }
 
@@ -145,15 +145,19 @@
             text-align: right;
             position: relative;
         }
-        .sec-bg-03{
+
+        .sec-bg-03 {
             position: relative;
-            top: -500px;;
+            top: -500px;
+            ;
             right: -750px;
-            
+
         }
-        .sec-bg-04{
+
+        .sec-bg-04 {
             position: relative;
-            top: 50px;;
+            top: 50px;
+            ;
             left: -750px;
         }
 
@@ -195,7 +199,7 @@
         .container {
             /* color: orange; */
             text-align: center;
-           
+
             padding: 50px;
             /* text-decoration: underline; */
         }
@@ -331,7 +335,7 @@
         .demo-sec {
             background-color: #1f2226;
             height: 1260px;
-            padding: 50px ;
+            padding: 50px;
             position: relative;
             z-index: 1;
             overflow: hidden;
@@ -342,7 +346,8 @@
             color: #ff5b37;
 
         }
-        .sec-bg-02{
+
+        .sec-bg-02 {
             position: absolute;
             top: 0;
             right: -700px;
@@ -388,6 +393,7 @@
             height: auto;
             display: block;
         }
+
         .dashboard-card:hover {
             transform: translateY(-3px);
             transition: all 0.3s ease;
@@ -453,17 +459,37 @@
             background-color: #ffffff !important;
             border-radius: 2px;
         }
-       .sec-bg-01{
-        position: relative;
-        top: 1300;
-        left: -700px;
-        width: 100%;
-        height: 100%;
-        
-       }
-        
 
-       
+        .sec-bg-01 {
+            position: relative;
+            top: 1300;
+            left: -700px;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        /* Key Benefits */
+        .section.key-benifit-sec {
+            background-color: white;
+            padding: 60px 0 40px;
+        }
+
+        .title-lines .line-small {
+            width: 30px;
+            height: 3px;
+            background-color: #1a1a1a;
+            /* Dark color from the image */
+            display: inline-block;
+        }
+
+        .title-lines .line-large {
+            width: 80px;
+            height: 3px;
+            background-color: #2c6e85;
+            /* Teal color from the image */
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -491,6 +517,20 @@
       px-4               -> horizontal padding
     ====================================================
     -->
+    <div class="preview_header">
+        <div class="preview_envato-logo">
+            <a class="header-envato_market" href="https://themeforest.net/item/smarthr-react-admin-template/28253842">
+                envato<span>market</span>
+            </a>
+        </div>
+        <div class="preview_actions">
+            <a class="header-buy-now" href="https://themeforest.net/checkout/from_item/28253842">
+                Buy now
+            </a>
+        </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-lg navbar-light smarthr-navbar px-4">
 
         <!-- Logo (navbar-brand = styled brand link) -->
@@ -860,8 +900,88 @@
                 </a>
             </div>
             <div class="sec-bg">
-                <div class="sec-bg-01"><img src="/assets/images/Img/sec-bg-06.webp"  alt="img"></div>
-                <div class="sec-bg-02"><img src="/assets/images/Img/sec-bg-05.webp"  alt="img"></div>
+                <div class="sec-bg-01"><img src="/assets/images/Img/sec-bg-06.webp" alt="img"></div>
+                <div class="sec-bg-02"><img src="/assets/images/Img/sec-bg-05.webp" alt="img"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Key Benefits Section -->
+    <section class="section key-benifit-sec">
+        <div class="container text-center">
+            <div class="section-header mb-5">
+                <div class="fs-14 fw-medium mb-2 text-orange text-center">
+                    Key Benefits
+                    <div class="title-lines">
+                        <i class="line-small "></i>
+                        <i class="line-large"></i>
+                    </div>
+                </div>
+                <h2 class="text-dark fw-bold">Why Choose Our HR Admin Template?</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <div class="flex-fill mb-4 mb-lg-0 text-start">
+                        <!-- Changed to text-start for cleaner readability next to numbers -->
+                        <div class="key-steps">
+                            <div class="d-flex align-items-center mb-2">
+                                <span
+                                    class="flex-shrink-0 d-flex align-items-center justify-content-center me-2">1</span>
+                                <h3 class="fs-20 mb-0">Boost Productivity</h3>
+                            </div>
+                            <p class="text-truncate line-clamp-2">Automate repetitive tasks like candidate tracking, job
+                                postings, and payroll management to save time and focus on strategic HR activities.</p>
+                        </div>
+                        <div class="key-steps">
+                            <div class="d-flex align-items-center mb-2">
+                                <span
+                                    class="flex-shrink-0 d-flex align-items-center justify-content-center me-2">2</span>
+                                <h3 class="fs-20 mb-0">Save Time</h3>
+                            </div>
+                            <p class="text-truncate line-clamp-2">With everything integrated into one platform, you can
+                                manage job listings, employee records, performance reviews, and more in just a few
+                                clicks.</p>
+                        </div>
+                        <div class="key-steps">
+                            <div class="d-flex align-items-center mb-2">
+                                <span
+                                    class="flex-shrink-0 d-flex align-items-center justify-content-center me-2">3</span>
+                                <h3 class="fs-20 mb-0">Customizable and Scalable</h3>
+                            </div>
+                            <p class="text-truncate line-clamp-2">Whether you’re a startup or a large enterprise, you
+                                can customize the platform’s features, layouts, and reporting capabilities to match your
+                                specific requirements.</p>
+                        </div>
+                        <div class="key-steps mb-0">
+                            <div class="d-flex align-items-center mb-2">
+                                <span
+                                    class="flex-shrink-0 d-flex align-items-center justify-content-center me-2">4</span>
+                                <h3 class="fs-20 mb-0">Enhanced Collaboration</h3>
+                            </div>
+                            <p class="text-truncate line-clamp-2">Share documents, track progress on tasks, and ensure
+                                smooth communication across departments to meet your organizational goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex">
+                    <div class="bg-light flex-fill key-sec-img">
+                        <span>
+                            <img src="/assets/images/img/key-sec-img-01.svg" alt="Key Benefits Image 1"
+                                class="key-bg-01">
+                        </span>
+                        <span>
+                            <img src="/assets/images/img/key-sec-img-02.webp" alt="Key Benefits Image 2"
+                                class="key-bg-02">
+                        </span>
+                        <span>
+                            <img src="/assets/images/img/sec-bg-01.png" alt="Key Benefits Image 3" class="key-bg-03">
+                        </span>
+                        <span>
+                            <img src="/assets/images/img/sec-bg-02.png" alt="Key Benefits Image 4" class="key-bg-04">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
