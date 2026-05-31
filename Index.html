@@ -648,7 +648,77 @@
             left: -30px;
             z-index: 2;
         }
-        
+
+        /* Counter Section Container */
+        .counter-sec {
+            background-color: #1a1d20;
+            height: 130px;
+            /* Dark premium background from your image */
+            padding: -10px;
+
+            font-family: 'Inter', sans-serif;
+            /* Clean modern font matching the image */
+
+        }
+
+        /* Big numbers styling */
+        .counter-number {
+            color: #ffffff;
+            font-size: 1.5rem;
+            /* Large bold text */
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Labels & Icons styling */
+        .counter-label {
+            color: #e0e0e0;
+            /* Subtle white/gray */
+            font-size: 15px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            /* Space between icon and text */
+            margin: 0;
+        }
+
+        /* Icons styling (matching the yellowish-orange accent theme) */
+        .counter-label i {
+            color: white;
+            /* Accent color for the design icons */
+            font-size: 18px;
+        }
+
+        /* Optional responsive tweak: keeps layout looking good on smaller screens */
+        @media (max-width: 576px) {
+            .counter-number {
+                font-size: 2rem;
+            }
+
+            .counter-label {
+                font-size: 13px;
+            }
+        }
+
+        .sec-bg-8 {
+            position: relative;
+            left: -600px;
+            top: -135px;
+        }
+
+        .sec-bg-7 {
+            position: relative;
+
+            right: -650px;
+            top: -100px;
+        }
+
+        .inner-pages-sec {
+            background-color: white;
+
+        }
     </style>
 </head>
 
@@ -1152,73 +1222,127 @@
     <section class="section counter-sec">
         <div class="container">
             <div class="row g-4">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.2s"
-                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <h3 class="text-white mb-1">
-                            <span class="count-digit counter-loaded">10</span>
-                            "+"
+                <div class="col-6 col-lg-3">
+                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <h3 class="counter-number">
+                            <span class="count-digit counter-loaded">10</span>+
                         </h3>
-                        <p class="fw-medium fs-14 text-white">
-                            <i class="ti ti-apps me-1">
-                                ::before
-                            </i>
-                            "Applications"
+                        <p class="counter-label">
+                            <i class="bi bi-grid"></i> Applications
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.4s"
-                        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                        <h3 class="text-white mb-1">
-                            <span class="count-digit counter-loaded">200</span>
-                            "+"
+
+                <div class="col-6 col-lg-3">
+                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.4s">
+                        <h3 class="counter-number">
+                            <span class="count-digit counter-loaded">200</span>+
                         </h3>
-                        <p class="fw-medium fs-14 text-white">
-                            <i class="ti ti-files me-1">
-                                ::before
-                            </i>
-                            "Pages"
+                        <p class="counter-label">
+                            <i class="bi bi-file-text"></i> Pages
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.6s"
-                        style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                        <h3 class="text-white mb-1">
-                            <span class="count-digit counter-loaded">80</span>
-                            "+"
+
+                <div class="col-6 col-lg-3">
+                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.6s">
+                        <h3 class="counter-number">
+                            <span class="count-digit counter-loaded">80</span>+
                         </h3>
-                        <p class="fw-medium fs-14 text-white">
-                            <i class="ti ti-brand-hipchat me-1">
-                                ::before
-                            </i>
-                            "Widgets"
+                        <p class="counter-label">
+                            <i class="bi bi-layout-wtf"></i> Widgets
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.8s"
-                        style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                        <h3 class="text-white mb-1">
-                            <span class="count-digit counter-loaded">400</span>
-                            "+"
+
+                <div class="col-6 col-lg-3">
+                    <div class="counter-item text-center wow fadeInUp" data-wow-delay="0.8s">
+                        <h3 class="counter-number">
+                            <span class="count-digit counter-loaded">400</span>+
                         </h3>
-                        <p class="fw-medium fs-14 text-white">
-                            <i class="ti ti-users me-1">
-                                ::before
-                            </i>
-                            "Components"
+                        <p class="counter-label">
+                            <i class="bi bi-x-diamond-fill"></i> Components
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="sec-bg">
-
+            <div class="sec-bg">
+                <img src="/assets/images/Img/sec-bg-08.webp" class="sec-bg-8" alt="img">
+                <img src="/assets/images/Img/sec-bg-07.webp" class="sec-bg-7" alt="img">
+            </div>
         </div>
     </section>
+    <section class="section inner-pages-sec custom-padding" id="inner-pages">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="fs-14 fw-medium text-primary title-bar mb-2">
+                    "Inner Pages"
+                    <i class="line-small"></i>
+                    <i class="line-large"></i>
+                </div>
+                <h2 class="fw-bold mb-5">Prebuilt Pages to Accelerate Your Workflow</h2>
+            </div>
+            <div class="template-inner-tab">
+                <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab2" role="tablist">
+                    <li class="nav-item me-3 mb-2" role="presentation">
+                        <button class="nav-link active" id="pills-dashboard-tab6" data-bs-toggle="pill"
+                            data-bs-target="#pills-dashboard6" type="button" role="tab"
+                            aria-selected="true">Applications</button>
+                    </li>
+                    <li class="nav-item me-3 mb-2" role="presentation"><button class="nav-link"
+                            id="pills-dashboard-tab7" data-bs-toggle="pill" data-bs-target="#pills-dashboard7"
+                            type="button" role="tab" aria-selected="false" tabindex="-1">CRMS</button>
+                    </li>
+                    <li class="nav-item me-3 mb-2" role="presentation"><button class="nav-link"
+                            id="pills-dashboard-tab8" data-bs-toggle="pill" data-bs-target="#pills-dashboard8"
+                            type="button" role="tab" aria-selected="false" tabindex="-1">Authentication</button></li>
+                    <li class="nav-item me-3 mb-2" role="presentation"><button class="nav-link"
+                            id="pills-dashboard-tab9" data-bs-toggle="pill" data-bs-target="#pills-dashboard9"
+                            type="button" role="tab" aria-selected="false" tabindex="-1">Other Modules</button></li>
+                </ul>
 
+                <div class="tab-content dashboard-tab">
+                    <div class="tab-pane fade active show" id="pills-dashboard6" role="tabpanel"
+                        aria-labelledby="pills-dashboard-tab6">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-hover">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <h3 class="fs-20">
+                                                <a href="https://smarthr.dreamstechnologies.com/react/template/application/chat"
+                                                    target="_blank">Chats</a>
+                                            </h3>
+                                            <a href="https://smarthr.dreamstechnologies.com/react/template/application/chat"
+                                                target="_blank" class="fs-24"></a>
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                        <div class="inner-img-bg">
+                                            <a href="https://smarthr.dreamstechnologies.com/react/template/application/chat"
+                                                target="_blank">
+                                                <img src="/assets/images/img/inner-page-01.jpg" alt="Chat Application"
+                                                    class="img-fluid rounded">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                            <div class="col-lg-4 col-md-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-bg">
+            </div>
+        </div>
+    </section>
     <!-- Bootstrap 5 JS Bundle CDN (required for navbar mobile toggle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
