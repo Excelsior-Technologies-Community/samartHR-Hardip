@@ -31,7 +31,6 @@
  .smarthr-navbar .nav-link {
      color: #333;
      font-weight: 500;
-     border: none;
      transition: color 0.2s ease;
  }
 
@@ -797,8 +796,9 @@
      -moz-transform: translateY(-10px);
      -ms-transform: translateY(-10px);
      -o-transform: translateY(-10px);
-}
-.card img {
+ }
+
+ .card img {
      width: 100%;
      height: auto;
      display: block;
@@ -872,4 +872,3 @@
      color: #ff5b37;
      text-decoration: underline;
  }
- 
