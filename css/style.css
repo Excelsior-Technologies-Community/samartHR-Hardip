@@ -198,6 +198,10 @@
      }
  }
 
+
+
+
+ 
  /* Overview Section */
  .overview {
      padding: 100px 0;
@@ -227,13 +231,13 @@
      left: -750px;
  }
 
- .section-header .title-bar {
+ .container .title-bar {
      position: relative;
      display: inline-block;
      text-align: center;
  }
 
- .section-header .title-bar::before {
+ .container .title-bar::before {
      content: "";
      width: 30%;
      height: 2px;
@@ -244,7 +248,7 @@
      bottom: -2px;
  }
 
- .section-header .title-bar::after {
+ .container .title-bar::after {
      content: "";
      width: 70%;
      height: 2px;
@@ -263,11 +267,11 @@
  }
 
  .container {
-     /* color: orange; */
+  
      text-align: center;
 
-     padding: 50px;
-     /* text-decoration: underline; */
+     padding: 100px;
+
  }
 
  .heading {
@@ -526,25 +530,7 @@
  }
 
 
- .title-lines .line-small {
-     display: inline-block;
-     width: 12px;
-
-     height: 3px;
-
-     background-color: #ffffff !important;
-     border-radius: 2px;
- }
-
- .title-lines .line-large {
-     display: inline-block;
-     width: 35px;
-
-     height: 3px;
-
-     background-color: #ffffff !important;
-     border-radius: 2px;
- }
+ 
 
  .sec-bg-01 {
      position: relative;
@@ -676,11 +662,10 @@
  .counter-sec {
      background-color: #1a1d20;
      height: 130px;
-     /* Dark premium background from your image */
-     padding: -10px;
+     padding-top: -15px;
 
      font-family: 'Inter', sans-serif;
-     /* Clean modern font matching the image */
+    
 
  }
 
@@ -1069,6 +1054,8 @@
 
  /* pricing Section */
 
+ 
+
  .pricing-section {
      background-color: #212529;
      padding: 10px 0;
@@ -1076,6 +1063,7 @@
      padding-top: 0px;
 
  }
+ 
 
  .sec-bg-10 {
      position: relative;
@@ -1093,7 +1081,7 @@
 
  .sec-bg-12 {
      position: relative;
-     top: 955px;
+     top: 1220px;
      right: 150px;
      height: 100%;
      width: 8%;
@@ -1136,6 +1124,7 @@
     position: absolute;
     top: -15px;
     left:100px;
+    z-index: 10 ! important;
     
 }
 .btn{
@@ -1145,7 +1134,32 @@
     margin-bottom: -10px;
 }
 
-.section-header .title-bar::after {
+
+
+.section-header .title-bar {
+    position: relative;
+    display: inline-block;
+}
+.text-primary {
+    color: #f26522 !important;
+    opacity: 1;
+}
+.fs-14 {
+    font-size: .875rem !important;
+}
+
+.section-header .title-bar i:first-child {
+    content: "";
+    width: 30%;
+    height: 2px;
+    border-radius: 10px;
+    background: #212529;
+    position: absolute;
+    left: -1px;
+    bottom: -2px;
+}
+
+.section-header .title-bar i:last-child {
     content: "";
     width: 70%;
     height: 2px;
@@ -1155,13 +1169,202 @@
     right: -1px;
     bottom: -2px;
 }
-.section-header .title-bar::before {
+
+.pricing-card {
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: visible;
+    border: 1px solid #dcdcdc;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+.pricing-card .card-header {
+    background: #f5f5f5;
+    padding: 30px 25px 20px;
+}
+
+.pricing-card h3 {
+    color: #0f172a;
+    font-size: 20px;
+   
+}
+
+.pricing-head h4 {
+    color: #f97316;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.pricing-card p {
+    color: #5b6475;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pricing-card .card-body {
+    padding: 20px;
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-list li {
+    border: none;
+    padding: 9px 0;
+    color: #5b6475;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pricing-list li i {
+    font-size: 15px;
+}
+
+.disabled-item {
+    color: #8d94a1;
+}
+
+.pricing-card .btn-dark {
+    background: #1d232d;
+    border: none;
+    height: 50px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.pricing-card .btn-dark:hover {
+    background: #111827;
+}
+
+/* Recommended Badge */
+.recommend-text {
+    .recommend-text{
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #ff6b00;
+    border: 2px solid #ff6b00;
+    border-radius: 30px;
+    padding: 6px 20px;
+    z-index: 999;
+}
+}
+
+/* Divider */
+.pricing-card:hover{
+    transform: none;
+}
+
+
+/* FAQ Section */
+
+.faq-sec {
+    padding: 5px 0;
+    background: #f5f5f5;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: -40px;
+    height: auto;
+}
+.section-header .title-bar i:first-child {
     content: "";
-    width: 70%;
+    width: 30%;
     height: 2px;
     border-radius: 10px;
-    background: #f4f5f6;
+    background: #212529;
     position: absolute;
     left: -1px;
     bottom: -2px;
 }
+.section-header .title-bar i:last-child {
+    content: "";
+    width: 70%;
+    height: 2px;
+    border-radius: 10px;
+    background: #3b7080;
+    position: absolute;
+    right: -1px;
+    bottom: -2px;
+}
+
+h3{
+    color: #111827;
+    font-family: Archivo, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.accordion-button {
+    background-color: #fff;
+    color: #111827;
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.faq-cards .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e2e8f0; 
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+}
+
+/* Remove default padding from header so everything lines up cleanly */
+.faq-cards .accordion-header {
+    margin-bottom: 0;
+}
+
+/* --- Accordion Button (Closed State) --- */
+.faq-cards .accordion-button {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* --- Expanded Content Alignment --- */
+.faq-cards .accordion-collapse {
+    border: none;
+}
+
+
+
+.faq-cards .accordion-body p {
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+

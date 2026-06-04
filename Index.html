@@ -17,28 +17,6 @@
 
 <body>
 
-    <!--
-    =====================================================
-    NAVBAR  -- Bootstrap navbar component
-    Bootstrap classes used:
-      navbar             -> makes it a navbar
-      navbar-expand-lg   -> collapses on mobile, full on lg+
-      navbar-light       -> dark text/icons on light bg
-      container-fluid    -> full-width inner wrapper
-      navbar-brand       -> logo/brand link
-      navbar-toggler     -> hamburger button for mobile
-      collapse           -> collapsible area
-      navbar-collapse    -> collapse target for nav links
-      navbar-nav         -> the <ul> nav list
-      ms-auto            -> margin-start:auto  (pushes links right)
-      nav-item           -> each <li>
-      nav-link           -> each <a>
-      fw-semibold        -> font-weight: 600
-      btn btn-dark       -> Bootstrap dark filled button
-      rounded-3          -> border-radius
-      px-4               -> horizontal padding
-    ====================================================
-    -->
     <div class="preview_header">
         <div class="preview_envato-logo">
             <a class="header-envato_market" href="https://themeforest.net/item/smarthr-react-admin-template/28253842">
@@ -84,23 +62,7 @@
     </nav>
 
 
-    <!--
-    =====================================================
-    HERO SECTION
-    Bootstrap classes used:
-      container     -> centered max-width wrapper
-      text-center   -> text-align: center
-      py-5          -> padding top & bottom (5 = 3rem)
-      mt-4          -> margin-top
-      fs-5          -> font-size: 1.25rem
-      d-flex        -> display: flex
-      justify-content-center -> flex main axis centering
-      gap-3         -> gap between flex children
-      mt-5          -> margin-top larger
-      img-fluid     -> responsive image (max-width:100%)
-      position-relative / position-absolute -> Bootstrap position utilities
-    ====================================================
-    -->
+   
     <section class="hero py-5 mt-4" id="home">
         <div class="container text-center">
 
@@ -141,39 +103,22 @@
             </div>
         </div>
     </section>
+    <!--Overview section  -->
 
 
-    <!--
-    =====================================================
-    OVERVIEW SECTION
-    Bootstrap classes used:
-      container       -> centered wrapper
-      row             -> flex row (Bootstrap grid parent)
-      g-4             -> gap between columns (gutters)
-      col-sm-6        -> 2 columns on small screens
-      col-md-3        -> 4 columns on medium+ screens
-      justify-content-center -> center the row
-      text-center     -> center text
-      fw-bold         -> font-weight: bold
-      text-muted      -> gray text (Bootstrap utility)
-      text-dark       -> dark text
-      mb-5            -> margin-bottom
-      p-3             -> padding 1rem
-      h-100           -> height: 100% (equal height cards)
-      rounded         -> border-radius on image
-    ====================================================
-    -->
     <section class="overview py-5">
         <div class="container">
 
-            <div class="text-center mb-2">
-                <span class="title-bar">Overview</span>
+            <div class ="fs-14 fw-medium text-primary title-bar mb-2">
+                "Overview"
+                <i></i>
+                <i></i>
             </div>
             <h2 class="text-center fw-bold text-dark mb-5" style="font-size:30px;">
                 All-in-One HR Solution for Growing Businesses
             </h2>
 
-            <!-- Bootstrap grid: row + col = responsive layout, no custom CSS needed -->
+            
             <div class="row g-4 justify-content-center">
 
                 <div class="col-sm-6 col-md-3">
@@ -216,32 +161,14 @@
     </section>
 
 
-    <!--
-    =====================================================
-    USE CASES SECTION
-    Bootstrap classes used:
-      container     -> centered wrapper
-      text-center   -> center all content
-      row g-4       -> 3-column grid with gutters
-      col-md-4      -> 3 equal columns on medium+ screens
-      fw-bold       -> bold headings
-      text-muted    -> gray paragraph text
-      d-flex        -> flex for CTA row
-      justify-content-center -> center CTA buttons
-      gap-3         -> space between buttons
-      mt-5          -> margin above CTA
-      mb-3 / mb-5   -> vertical spacing
-    ====================================================
-    -->
+  
     <section class="section-usecase">
         <div class="container text-center">
 
-            <div class="mb-3 text-center">
-                <span class="usecase-badge">Use Cases</span>
-                <div class="title-lines dark-lines">
-                    <i class="line-small"></i>
-                    <i class="line-large"></i>
-                </div>
+            <div class="fs-14 fw-medium text-primary title-bar mb-2">
+                "Use Cases"
+                <i></i>
+                <i></i>
             </div>
             <h2 class="fw-bold mb-5" style="color:#0f172a; font-size:32px;">
                 Designed for HR Professionals
@@ -307,14 +234,12 @@
     <section class="section demo-sec" id="demos">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <div class="fs-14 fw-medium mb-2 text-orange text-center">
-                    Demos
-                    <div class="title-lines">
-                        <i class="line-small"></i>
-                        <i class="line-large"></i>
-                    </div>
+                <div class="fs-14 fw-medium  title-bar mb-2 ">
+                    "Demos"
+                    <i class="bg-white"></i>
+                    <i class="bg-white"></i>
                 </div>
-                <h2 class="text-white fw-bold">See the Template in Action</h2>
+                <h2 class="text-white">See the Template in Action</h2>
             </div>
 
             <div class="row">
@@ -1645,7 +1570,7 @@
         </div>
         <div class="container">
             <div class="section-header text-center mb-5">
-                <div class="fs-14 fw-medium  title-bar mb-2">
+                <div class="fs-14 fw-medium  title-bar mb-2 ">
                     "Pricing"
                     <i class="bg-white"></i>
                     <i class="bg-white"></i>
@@ -1664,53 +1589,37 @@
                                         <div class="pricing-head mb-2">
                                             <h4 class="text-orange fw-bold">$35</h4>
                                         </div>
-                                        <p >Use, by you or one client, in a single end product which end users are not
+                                        <p>Use, by you or one client, in a single end product which end users are not
                                             charged for.</p>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="pricing-body">
-                                        <ul class="list-group list-group-flush">
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Full Source Code
+                                        <ul class="list-group list-group-flush text-start pricing-list mb-4">
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Full Source Code
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Premium Support
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Premium Support
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Lifetime Free
-                                                Updates
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Lifetime Free
+                                                Updates</li>
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Figma Design File
                                             </li>
-                                            <li>
-                                                <i class="bi bi-checl-circlr me-2 text-succes"></i>Figma Design File
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Free Lifetime
-                                                Updates
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> 6 Months of Support
-                                                (Envato Support Policy)
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> All Features
-                                                Included
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-x-circle me-2 text-danger"></i> Unlimited Users
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-x-circle me-2 text-danger"></i> Priority Support
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-x-circle me-2 text-danger"></i> White-label Branding
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-x-circle me-2 text-danger"></i> SaaS Product Development
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-x-circle me-2 text-danger"></i> Installation Support
-                                            </li>
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> No Charge for End
+                                                Users</li>
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> 6 Months of Support
+                                                (Envato Support Policy)</li>
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> All Features
+                                                Included</li>
+                                            <li class="disabled-item"><i class="bi bi-x-circle-fill text-danger"></i>
+                                                For Commercial Projects</li>
+                                            <li class="disabled-item"><i class="bi bi-x-circle-fill text-danger"></i>
+                                                Priority Support</li>
+                                            <li class="disabled-item"><i class="bi bi-x-circle-fill text-danger"></i>
+                                                White-label Branding</li>
+                                            <li class="disabled-item"><i class="bi bi-x-circle-fill text-danger"></i>
+                                                SaaS Product Development</li>
+                                            <li class="disabled-item"><i class="bi bi-x-circle-fill text-danger"></i>
+                                                Installation Support</li>
                                         </ul>
                                         <a href="https://themeforest.net/item/smarthr-react-admin-template/28253842"
                                             target="_blank" class="btn btn-dark w-100">Choose Plan</a>
@@ -1719,7 +1628,6 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-
                             <div class="card pricing-card wow fadeInUp" data-wow-delay="0.2s"
                                 style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                                 <div class="card-header rounded-top border-bottom">
@@ -1737,49 +1645,36 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="pricing-body">
-                                        <ul class="list-group list-group-flush">
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Full Source Code
+                                        <ul class="list-group list-group-flush text-start pricing-list mb-4">
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Full Source Code
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Premium Support
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Premium Support
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Lifetime Free
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Lifetime Free
                                                 Updates
                                             </li>
-                                            <li>
-                                                <i class="bi bi-checl-circlr me-2 text-succes"></i>Figma Design File
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Figma Design File
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Free Lifetime
-                                                Updates
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> No Charge for End
+                                                Users
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> 6 Months of Support
-                                                (Envato Support Policy)
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> All Features
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> 6 Months of Support
+                                                (Envato Support Policy)</li>
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> All Features
                                                 Included
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Unlimited Users
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> For Commercial
+                                                Projects
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> Priority Support
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> Priority Support
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> White-label
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> White-label
                                                 Branding
                                             </li>
-                                            <li>
-                                                <i class="bi bi-check-circle me-2 text-success"></i> SaaS Product
-                                                Development
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-x-circle me-2 text-danger"></i> Installation Support
-                                            </li>
+                                            <li><i class="bi bi-check-circle-fill text-success"></i> SaaS Product
+                                                Development</li>
+                                            <li class="disabled-item"><i class="bi bi-x-circle-fill text-danger"></i>
+                                                Installation Support</li>
                                         </ul>
                                         <a href="https://themeforest.net/item/smarthr-react-admin-template/28253842"
                                             target="_blank" class="btn btn-dark w-100">Choose Plan</a>
@@ -1791,9 +1686,94 @@
                 </div>
             </div>
         </div>
-        </div>
+
+    </section>
+
+    <!-- FAQ Section -->
+
+    <section class="section faq-sec " id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="fs-12 fw-small text-center title-bar mb-2">
+                    "FAQ"
+                    <i class="line-small"></i>
+                    <i class="line-large"></i>
+                </div>
+                <h2 class="fw-bold mb-5">Frequently Asked Questions</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="accordion accordion-flush faq-cards" id="accordionFaq">
+
+                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button px-0 pt-0 rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-collapseOne" aria-expanded="true"
+                                    aria-controls="faq-collapseOne">
+                                    <span class="d-inline-flex fs-28 me-3">01</span>
+                                    What is Regular License?
+                                </button>
+                            </h3>
+                            <div id="faq-collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionFaq">
+                                <div class="accordion-body ps-5">
+                                    <p>In simple terms, Regular License means your end product is distributed for free.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button px-0 pt-0 rounded collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-collapseTwo" aria-expanded="false"
+                                    aria-controls="faq-collapseTwo">
+                                    <span class="d-inline-flex fs-28 me-3">02</span>
+                                    What is Extended License?
+                                </button>
+                            </h3>
+                            <div id="faq-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFaq">
+                                <div class="accordion-body ps-5">
+                                    <p>Extended License allows building a single end product that you can use or
+                                        transfer to a client where end users of the product can be charged for. For
+                                        example; A subscription or a fixed price SaaS application.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay="0.6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button px-0 pt-0 rounded collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-collapseThree" aria-expanded="false"
+                                    aria-controls="faq-collapseThree">
+                                    <span class="d-inline-flex fs-28 me-3">03</span>
+                                    What will you get?
+                                </button>
+                            </h3>
+                            <div id="faq-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFaq">
+                                <div class="accordion-body ps-5 pb-0">
+                                    <p>All HTML files, All React files, CSS Files, SCSS Files, JS Files, Documentation,
+                                        Reliable Technical Support System, Lifetime Template Updates, Template
+                                        Documentation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+
+
     <!-- Bootstrap 5 JS Bundle CDN (required for navbar mobile toggle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
